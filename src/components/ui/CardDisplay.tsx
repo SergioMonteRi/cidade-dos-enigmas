@@ -12,7 +12,31 @@ const DIFFICULTY_COLORS = {
   'difícil': '#E85D75',
 };
 
+const CARDS_WITH_IMAGES = new Set([1, 2, 3, 4, 5, 6]);
+
+function getImageSrc(id: number): string | null {
+  if (!CARDS_WITH_IMAGES.has(id)) return null;
+  return `/images/card-${String(id).padStart(2, '0')}.jpeg`;
+}
+
 export default function CardDisplay({ card, mini = false }: CardDisplayProps) {
+  const imageSrc = getImageSrc(card.id);
+
+  if (imageSrc) {
+    return (
+      <article
+        className={`${styles.card} ${mini ? styles.mini : ''} ${styles.imageCard}`}
+        aria-label={`Carta ${card.id}: ${card.locationName}`}
+      >
+        <img
+          src={imageSrc}
+          alt={`Carta ${card.id} — ${card.locationName}`}
+          className={styles.cardImage}
+        />
+      </article>
+    );
+  }
+
   return (
     <article className={`${styles.card} ${mini ? styles.mini : ''}`}>
       <div className={styles.borderFrame}>
