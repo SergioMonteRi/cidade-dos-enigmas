@@ -49,7 +49,7 @@ export default function AnswerInput({ card }: AnswerInputProps) {
         <div className={styles.feedbackIcon}>❌</div>
         <h3 className={styles.feedbackTitle}>Resposta incorreta.</h3>
         {attempts >= 3 && (
-          <p className={styles.hint}>
+          <p className={styles.dica}>
             💡 <strong>Dica:</strong> Releia o desafio com atenção e verifique a unidade de medida pedida.
           </p>
         )}
@@ -66,7 +66,7 @@ export default function AnswerInput({ card }: AnswerInputProps) {
   return (
     <form onSubmit={(e) => { e.preventDefault(); submitAnswer(); }} className={styles.form}>
       <label htmlFor="answer-input" className={styles.label}>
-        Sua resposta:
+        Sua resposta{card.answerUnit && <span className={styles.labelUnit}> em {card.answerUnit}</span>}:
       </label>
       <div className={styles.inputRow}>
         <input
@@ -75,14 +75,11 @@ export default function AnswerInput({ card }: AnswerInputProps) {
           step="any"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          placeholder={card.answerUnit ? 'Ex: 42' : 'Digite o número...'}
+          placeholder="Ex: 42"
           required
           className={styles.input}
           aria-describedby="answer-hint"
         />
-        {card.answerUnit && (
-          <span className={styles.unit}>{card.answerUnit}</span>
-        )}
       </div>
       <p id="answer-hint" className={styles.hint}>
         Use ponto ou vírgula para decimais.

@@ -49,12 +49,9 @@
   box-shadow: 0 0 0 4px var(--color-accent-yellow-dim);
 }
 
-.unit {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 800;
+.labelUnit {
   color: var(--color-accent-teal);
-  white-space: nowrap;
+  font-weight: 700;
 }
 
 .hint {
@@ -108,7 +105,7 @@
   color: var(--color-accent-yellow);
 }
 
-.hint {
+.dica {
   font-size: 0.85rem;
   color: var(--color-text-muted);
   background: rgba(245, 166, 35, 0.08);
