@@ -212,10 +212,16 @@
 
   .content {
     align-items: center;
+    width: 100%;
   }
 
   .subtitle {
     text-align: center;
+  }
+
+  .actions {
+    justify-content: center;
+    width: 100%;
   }
 
   .features {
@@ -224,5 +230,18 @@
 
   .cardPreview {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .actions a,
+  .actions button {
+    width: 100%;
+    justify-content: center;
   }
 }
