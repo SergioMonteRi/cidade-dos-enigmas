@@ -1,0 +1,228 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: var(--section-padding) 1.5rem;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--color-accent-yellow-dim);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  color: var(--color-accent-yellow);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  width: fit-content;
+  letter-spacing: 0.03em;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  gap: 0.1rem;
+}
+
+.titleCity {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 900;
+  letter-spacing: 0.4em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+}
+
+.titleEnigmas {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 6rem);
+  font-weight: 800;
+  color: var(--color-accent-teal);
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 60px rgba(46, 196, 182, 0.3);
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.subtitle strong {
+  color: var(--color-accent-yellow);
+  font-weight: 700;
+}
+
+.subtitle span {
+  color: var(--color-accent-teal);
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  animation: fadeInUp 0.6s ease 0.15s both;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.feature span:first-child {
+  font-size: 1rem;
+}
+
+/* Card preview decorativo */
+.cardPreview {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.previewCard {
+  width: 200px;
+  height: 310px;
+  background: var(--color-bg-card);
+  border: 2.5px solid var(--color-accent-yellow);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  box-shadow: var(--shadow-card-hover);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.previewCardInner {
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(245, 166, 35, 0.25);
+  border-radius: 10px;
+  background-image: url('/maze-pattern.svg');
+  background-size: 60px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.previewHeader {
+  background: rgba(10, 22, 40, 0.9);
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-display);
+  font-size: 0.45rem;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid rgba(245, 166, 35, 0.15);
+}
+
+.previewHeader strong {
+  color: var(--color-accent-yellow);
+}
+
+.previewBadge {
+  background: #2EC4B6;
+  padding: 0.3rem 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: var(--color-bg);
+  text-align: center;
+}
+
+.previewBody {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background: rgba(0,0,0,0.3);
+}
+
+.previewChallenge {
+  background: rgba(10, 22, 40, 0.9);
+  padding: 0.5rem 0.6rem;
+  font-size: 0.45rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+.previewCardBack {
+  position: absolute;
+  width: 200px;
+  height: 310px;
+  background: var(--color-bg-card);
+  border: 2px solid rgba(245, 166, 35, 0.4);
+  border-radius: 14px;
+  top: 8px;
+  left: -8px;
+  z-index: 2;
+}
+
+.previewCardBack2 {
+  position: absolute;
+  width: 200px;
+  height: 310px;
+  background: var(--color-bg-card);
+  border: 2px solid rgba(245, 166, 35, 0.25);
+  border-radius: 14px;
+  top: 16px;
+  left: -16px;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5rem;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .features {
+    justify-content: center;
+  }
+
+  .cardPreview {
+    display: none;
+  }
+}

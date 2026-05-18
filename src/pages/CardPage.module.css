@@ -1,0 +1,150 @@
+.page {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-bottom: 2.5rem;
+}
+
+.back:hover {
+  color: var(--color-accent-teal);
+}
+
+.layout {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.cardCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
+}
+
+.librasWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.answerCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.cardTag {
+  display: inline-flex;
+  align-items: center;
+  background: var(--color-accent-yellow-dim);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  color: var(--color-accent-yellow);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  width: fit-content;
+  letter-spacing: 0.08em;
+}
+
+.locationTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.challengeBlock {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+}
+
+.challengeLabel {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-accent-yellow);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.challengeText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.difficultyTag {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* Not found */
+.notFound {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.notFoundIcon {
+  font-size: 4rem;
+}
+
+.notFound h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.notFound p {
+  color: var(--color-text-muted);
+  max-width: 360px;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .answerCol {
+    width: 100%;
+  }
+}

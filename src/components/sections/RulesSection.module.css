@@ -1,0 +1,273 @@
+.section {
+  padding: var(--section-padding) 1.5rem;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 5rem;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--color-accent-yellow);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ── Content column ──────────────────────────── */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Highlight row (objetivo + participantes) ── */
+
+.highlightRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background: rgba(46, 196, 182, 0.06);
+  border: 1px solid rgba(46, 196, 182, 0.2);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+}
+
+.highlightAccent {
+  background: rgba(245, 166, 35, 0.06);
+  border-color: rgba(245, 166, 35, 0.2);
+}
+
+.highlightIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.highlightTitle {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.03em;
+}
+
+.highlightText {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.highlightText strong {
+  color: var(--color-text);
+}
+
+/* ── Steps block ─────────────────────────────── */
+
+.stepsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.blockLabel {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+.steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.step:hover {
+  border-color: rgba(245, 166, 35, 0.2);
+  background: var(--color-accent-yellow-dim);
+}
+
+.stepNumber {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent-yellow);
+  color: var(--color-bg);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepText {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  padding-top: 0.2rem;
+}
+
+/* ── Outcome cards ───────────────────────────── */
+
+.outcomeRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.outcomes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.outcome {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  border: 1px solid;
+}
+
+.outcomeCorrect {
+  background: rgba(46, 196, 182, 0.08);
+  border-color: rgba(46, 196, 182, 0.25);
+}
+
+.outcomeWrong {
+  background: rgba(232, 93, 117, 0.08);
+  border-color: rgba(232, 93, 117, 0.25);
+}
+
+.outcomeIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.outcome strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.outcome p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── Quick challenges ────────────────────────── */
+
+.quickBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(123, 94, 167, 0.08);
+  border: 1px solid rgba(123, 94, 167, 0.25);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+}
+
+.quickIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.quickTitle {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 0.35rem;
+}
+
+.quickText {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 0.6rem;
+}
+
+.quickText strong {
+  color: var(--color-text);
+}
+
+.quickResults {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.quickResult {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+/* ── Responsive ──────────────────────────────── */
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .header {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlightRow,
+  .outcomes {
+    grid-template-columns: 1fr;
+  }
+}

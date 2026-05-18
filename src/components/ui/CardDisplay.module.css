@@ -1,0 +1,213 @@
+.card {
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  background: var(--color-bg-card);
+  border-radius: var(--card-border-radius);
+  border: 2.5px solid var(--color-accent-yellow);
+  box-shadow: var(--shadow-card);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.card.mini {
+  width: 130px;
+  height: 200px;
+  border-width: 2px;
+}
+
+.borderFrame {
+  position: absolute;
+  inset: 6px;
+  border-radius: 11px;
+  border: 1px solid rgba(245, 166, 35, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-bg-card);
+  background-image: url('/maze-pattern.svg');
+  background-size: 80px;
+  background-repeat: repeat;
+}
+
+.mini .borderFrame {
+  inset: 4px;
+  border-radius: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  background: rgba(10, 22, 40, 0.85);
+  border-bottom: 1px solid rgba(245, 166, 35, 0.2);
+  flex-shrink: 0;
+}
+
+.mini .header {
+  padding: 0.3rem 0.5rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.logo strong {
+  color: var(--color-accent-yellow);
+  display: block;
+  font-size: 0.65rem;
+}
+
+.mini .logo {
+  font-size: 0.4rem;
+}
+
+.mini .logo strong {
+  font-size: 0.5rem;
+}
+
+.difficulty {
+  font-family: var(--font-body);
+  font-size: 0.45rem;
+  font-weight: 800;
+  padding: 0.15rem 0.4rem;
+  border-radius: 50px;
+  color: var(--color-bg);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  flex-shrink: 0;
+}
+
+.badgeIcon {
+  font-size: 1.1rem;
+}
+
+.mini .badgeIcon {
+  font-size: 1rem;
+}
+
+.badgeName {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--color-bg);
+  letter-spacing: 0.08em;
+}
+
+.illustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.illustrationEmoji {
+  font-size: 3.5rem;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.3));
+}
+
+.mini .illustrationEmoji {
+  font-size: 2.2rem;
+}
+
+.illustrationGlow {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(20px);
+}
+
+.challenge {
+  padding: 0.6rem 0.75rem;
+  background: rgba(10, 22, 40, 0.9);
+  border-top: 1px solid rgba(245, 166, 35, 0.2);
+  flex-shrink: 0;
+}
+
+.challengeHeader {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--color-accent-yellow);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.challengeText {
+  font-size: 0.65rem;
+  color: var(--color-text);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  background: rgba(10, 22, 40, 0.9);
+  border-top: 1px solid rgba(245, 166, 35, 0.15);
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.mini .footer {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.cardNumber {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: var(--color-accent-yellow);
+  letter-spacing: 0.05em;
+}
+
+.corner {
+  position: absolute;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-accent-yellow);
+  opacity: 0.7;
+  line-height: 1;
+}
+
+.cornerTL { top: -2px; left: 4px; }
+.cornerTR { top: -2px; right: 4px; }
+.cornerBL { bottom: -1px; left: 4px; }
+.cornerBR { bottom: -1px; right: 4px; }
+
+.mini .corner {
+  font-size: 0.55rem;
+}

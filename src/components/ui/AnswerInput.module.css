@@ -1,0 +1,118 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.input {
+  flex: 1;
+  background: var(--color-bg-light);
+  border: 2px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.input:focus {
+  border-color: var(--color-accent-yellow);
+  box-shadow: 0 0 0 4px var(--color-accent-yellow-dim);
+}
+
+.unit {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-accent-teal);
+  white-space: nowrap;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.feedback {
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  animation: fadeInUp 0.3s ease;
+}
+
+.correct {
+  background: rgba(46, 196, 182, 0.1);
+  border: 2px solid rgba(46, 196, 182, 0.5);
+}
+
+.incorrect {
+  background: rgba(232, 93, 117, 0.1);
+  border: 2px solid rgba(232, 93, 117, 0.4);
+}
+
+.feedbackIcon {
+  font-size: 2rem;
+}
+
+.feedbackTitle {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.feedbackAnswer {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+}
+
+.feedbackAnswer strong {
+  color: var(--color-accent-teal);
+  font-size: 1.1rem;
+}
+
+.feedbackInstruction {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent-yellow);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  background: rgba(245, 166, 35, 0.08);
+  border-left: 3px solid var(--color-accent-yellow);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 8px 8px 0;
+}
