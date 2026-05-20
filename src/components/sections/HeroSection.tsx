@@ -48,14 +48,11 @@ export default function HeroSection() {
 
       <div className={styles.cardPreview} aria-hidden="true">
         <div className={styles.previewCard}>
-          <div className={styles.previewCardInner}>
-            <div className={styles.previewHeader}>
-              <span>CIDADE DOS <strong>ENIGMAS</strong></span>
-            </div>
-            <div className={styles.previewBadge}>🏫 ESCOLA</div>
-            <div className={styles.previewBody}>🔍</div>
-            <div className={styles.previewChallenge}>Desafio matemático aguarda...</div>
-          </div>
+          <img
+            src="/images/hero.jpeg"
+            alt="Carta Cidade dos Enigmas"
+            className={styles.previewImage}
+          />
         </div>
         <div className={styles.previewCardBack} />
         <div className={styles.previewCardBack2} />

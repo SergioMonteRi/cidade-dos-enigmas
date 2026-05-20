@@ -12,7 +12,7 @@ const DIFFICULTY_COLORS = {
   'difícil': '#E85D75',
 };
 
-const CARDS_WITH_IMAGES = new Set([1, 2, 3, 4, 5, 6]);
+const CARDS_WITH_IMAGES = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
 
 function getImageSrc(id: number): string | null {
   if (!CARDS_WITH_IMAGES.has(id)) return null;

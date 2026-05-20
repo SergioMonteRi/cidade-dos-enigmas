@@ -116,14 +116,19 @@
 .previewCard {
   width: 200px;
   height: 310px;
-  background: var(--color-bg-card);
-  border: 2.5px solid var(--color-accent-yellow);
   border-radius: 14px;
   overflow: hidden;
   position: relative;
   z-index: 3;
   box-shadow: var(--shadow-card-hover);
   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .previewCardInner {
