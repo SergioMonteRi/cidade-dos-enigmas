@@ -1,5 +1,4 @@
 import { GAME_INFO } from '../../data/cards';
-import LibrasPlayer from '../ui/LibrasPlayer';
 import styles from './AboutSection.module.css';
 
 const FEATURES = [
@@ -19,7 +18,6 @@ export default function AboutSection() {
             O que é<br /><span>Cidade dos Enigmas?</span>
           </h2>
           <p className={styles.description}>{GAME_INFO.about.text}</p>
-          <LibrasPlayer src={GAME_INFO.about.librasVideoSrc} label="Assistir apresentação em Libras" />
         </div>
 
         <div className={styles.features}>
