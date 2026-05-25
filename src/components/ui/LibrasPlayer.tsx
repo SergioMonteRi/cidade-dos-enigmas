@@ -2,11 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import styles from './LibrasPlayer.module.css';
 
 interface LibrasPlayerProps {
-  src: string;
-  label?: string;
+  readonly src: string;
+  readonly label?: string;
+  readonly title?: string;
 }
 
-export default function LibrasPlayer({ src, label = 'Assistir em Libras' }: LibrasPlayerProps) {
+export default function LibrasPlayer({ src, label = 'Assistir em Libras', title = '🤟 Libras' }: LibrasPlayerProps) {
   const [open, setOpen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -48,7 +49,7 @@ export default function LibrasPlayer({ src, label = 'Assistir em Libras' }: Libr
             <button className={styles.close} onClick={() => setOpen(false)} aria-label="Fechar vídeo">
               ✕
             </button>
-            <p className={styles.modalTitle}>🤟 Regras em Libras</p>
+            <p className={styles.modalTitle}>{title}</p>
             <video
               ref={videoRef}
               src={src}

@@ -34,7 +34,11 @@ export default function CardPage() {
           <div className={styles.cardCol}>
             <CardDisplay card={card} />
             <div className={styles.librasWrapper}>
-              <LibrasPlayer src={card.librasVideoSrc} label="Ver desafio em Libras" />
+              <LibrasPlayer
+                src={card.librasVideoSrc}
+                label="Ver desafio em Libras"
+                title={`🤟 Carta #${String(card.id).padStart(2, '0')} — ${card.locationName}`}
+              />
             </div>
           </div>
 
